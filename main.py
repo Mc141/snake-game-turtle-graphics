@@ -1,5 +1,6 @@
-from turtle import Turtle, Screen, time
+from turtle import Screen, time
 from snake import Snake
+from food import Food
 
 screen = Screen()
 
@@ -13,6 +14,7 @@ screen._root.resizable(False, False)
 
 
 snake = Snake()
+food = Food()
 
 
 screen.listen()
@@ -31,6 +33,11 @@ while game_is_running:
     
     snake.move()
     
+
+    if snake.head.distance(food) <  15:
+        food.refresh()
+
+
     screen.listen()
     
     

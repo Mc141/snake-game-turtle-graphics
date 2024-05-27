@@ -15,6 +15,7 @@ class Snake:
         self.square_x_posistions = [0, -20, -40]
         self.foward_distance = 20
         self.create_snake()
+        self.head = self.squares[0]
     
 
     def create_snake(self):
