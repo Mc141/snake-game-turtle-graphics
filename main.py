@@ -7,7 +7,10 @@ screen.screensize(600, 600)
 screen.setup(602, 602)
 screen.bgcolor("black")
 screen.title("Snake Game")
-screen.tracer(0)    
+screen.tracer(0)
+
+screen._root.resizable(False, False)
+
 
 snake = Snake()
 
