@@ -19,3 +19,8 @@ class Scoreboard(Turtle):
         self.speed('fastest')
         self.write(f"Score: {current_score}", font=("Arial", 16, "normal"))
         
+    def game_over(self):
+         self.penup()
+         self.goto(-80, 0)
+         self.pendown()
+         self.write(f"Game Over!", font=("Arial", 20, "normal"))
