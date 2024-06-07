@@ -41,11 +41,17 @@ while game_is_running:
         food.refresh()
         score_board.current_score += 1   
         score_board.update(score_board.current_score)
+        snake.extend()
+        
 
     if snake.head.xcor() > snake_range or snake.head.xcor() < -snake_range - 20 or snake.head.ycor() > snake_range + 20 or snake.head.ycor() < -snake_range:
         game_is_running = False
         score_board.game_over()
-    
+
+    for square in snake.squares[1:]:
+        if snake.squares[0].distance(square) < 5:
+            game_is_running = False
+            score_board.game_over()
 
 
 
